@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: black;
+            color: white;
+        }
+        .hero {
+            height: 90vh;
+            background: url('https://image.tmdb.org/t/p/original/9n2tJBplPbgR2ca05hS5CKXwP2c.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        .content {
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+        }
+        .content h1 {
+            font-size: 50px;
+            font-weight: bold;
+        }
+        .content p {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        .btn {
+            margin-top: 20px;
+            padding: 12px 24px;
+            font-size: 18px;
+            background-color: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .movies {
+            padding: 40px 5%;
+            text-align: center;
+        }
+        .movies h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .movie-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        .movie-card {
+            flex: 1 1 200px;
+            max-width: 200px;
+        }
+        .movie-card img {
+            width: 100%;
+            height: 280px;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .movie-card img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1>Unlimited movies, TV shows, and more.</h1>
+            <p>Watch anywhere. Cancel anytime.</p>
+            <a href="sign_in.html" class="btn">Sign In</a>
+        </div>
+    </div>
+
+    <div class="movies">
+        <h2>Trending Now</h2>
+        <div class="movie-grid">    
+            <div class="movie-card"><img src="https://image.tmdb.org/t/p/w500/fgsHxz21B27hOOqQBiw9L6yWcM7.jpg" alt="Movie 2"></div>
+            <div class="movie-card"><img src="https://image.tmdb.org/t/p/w500/d5NXSklXo0qyIYkgV94XAgMIckC.jpg" alt="Movie 3"></div>
+            <div class="movie-card"><img src="https://image.tmdb.org/t/p/w500/9n2tJBplPbgR2ca05hS5CKXwP2c.jpg" alt="Movie 4"></div>
+            <div class="movie-card"><img src="https://image.tmdb.org/t/p/w500/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg" alt="Movie 5"></div>
+        </div>
+    </div>
+
+</body>
+</html>
